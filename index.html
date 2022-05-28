@@ -8,16 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <link href="http://fonts.cdnfonts.com/css/renegade" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/asket-condensed" rel="stylesheet">
+    
                 
                 
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="box">
-        <h1>CARD POPUP</h1>
-        <img src="https://media.wired.com/photos/5f401ecca25385db776c0c46/master/pass/Gear-How-to-Apple-ios-13-home-screen-iphone-xs-06032019_big_large_2x.jpg" alt="" width="500px" >
-        
-        <button class="btn" id="blurbg" onclick="toggle()">Click Me</button>
+    <div class="box" id="blurbox">
+        <div class="headtxt">
+            CARD POPUP
+        </div>
+
+        <img src="https://media.wired.com/photos/5f401ecca25385db776c0c46/master/pass/Gear-How-to-Apple-ios-13-home-screen-iphone-xs-06032019_big_large_2x.jpg" alt="" width="500px" data-toggle="tooltip" >
+
+        <button type="button" class="btn" onclick="toggle()">About</button>
     </div>
+
+    <div id="popup">
+        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, quod dolore! Accusamus laudantium a quasi nesciunt possimus iusto culpa voluptatem error assumenda blanditiis! Tempore dicta cumque maxime illo nam consequatur alias, laboriosam numquam blanditiis nihil, nesciunt molestiae, aspernatur distinctio delectus suscipit porro necessitatibus aperiam. Optio excepturi ullam repellat quod laudantium placeat, molestiae eum quidem quos. Labore voluptate assumenda qui soluta sapiente distinctio nihil in excepturi. Error voluptatem ullam iste!lorem10docnwovnojwnivnwdvonsdovnsoidvoiwidem quos. Labore voluptate assumenda qui soluta sapiente distinctio nihil in excepturi. Error voluptatem ullam iste!lorem10docnwovnojwnivnwdvonsdovnsoidvoiw</p>
+        <button type="button" class="btn" data-toggle="tooltip" onclick="toggle()" >Close</button>
+    </div>
+
+
+    <script>
+        function toggle(){
+            var blurit = document.getElementById('blurbox')
+            blurit.classList.toggle('active')
+            
+            var popit = document.getElementsById('popup')
+            popit.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
